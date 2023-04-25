@@ -28,7 +28,7 @@ const CategoryProducts = () => {
 
         <div className='w-full max-w-[200px] ml-10 mt-10'>
           <button onClick={() => router.back()}>back</button>
-        </div>
+        </div>  
 
         <Carousel
           showArrows={true}

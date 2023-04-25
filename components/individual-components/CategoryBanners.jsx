@@ -32,6 +32,7 @@ const CategoryBanners = () => {
                         <div className='w-full relative flex justify-center items-center'>
                             <Image
                                 src={data?.image}
+                                alt={data?.title}
                                 className='rounded-[30px]'
                             />
                         </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='w-full flex justify-between items-center'>
+        <div className='w-full flex justify-between items-center '>
             {
                 navItems.map((data, i) => (
                     <Link className='w-full flex justify-center items-center hover:bg-blue-200 py-2 cursor-pointer rounded-[15px]' onClick={() => selectedCategory === data?.res_name ? setSelectedCategory(null) : setSelectedCategory(data?.res_name)} key={i} href={data?.route}>

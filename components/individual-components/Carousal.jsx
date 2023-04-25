@@ -21,15 +21,15 @@ export default function ResponsiveCarousel() {
     useEffect(() => {
     //   fetch(domain + 'brand_page').then((response) => response).then(data => console.log(data));
 
-      const callAPi = async() => {
+    //   const callAPi = async() => {
 
-          const response = await fetch(domain + 'brand_page');
-          const jsonData = await response.json();
-          setAllProducts(jsonData?.All_Products);
-      }
+    //       const response = await fetch(domain + 'brand_page');
+    //       const jsonData = await response.json();
+    //       setAllProducts(jsonData?.All_Products);
+    //   }
 
 
-      callAPi()
+    //   callAPi()
 
     }, [])
     

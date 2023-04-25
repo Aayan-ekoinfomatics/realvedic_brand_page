@@ -14,25 +14,33 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  
-  const domain = 'http://192.168.1.8:8000/';
+  const testObj = { a: 1, b: 2, c: 3, d: 4 };
+
+  Object.entries(testObj).forEach(([key, value]) => {
+    console.log(value)
+  });
+
+
+  const domain = '';
+  // const domain = 'http://192.168.1.8:8000/';
 
   const [allProducts, setAllProducts] = useRecoilState(allCategoriesAtom);
 
   useEffect(() => {
 
-      const callAPi = async() => {
+    const callAPi = async() => {
 
-          const response = await fetch(domain + 'brand_page');
-          const jsonData = await response.json();
-          setAllProducts(jsonData);
-      }
+        const response = await fetch(domain + 'category');
+        const jsonData = await response.json();
+        // setAllProducts(jsonData);
+        console.log(jsonData);
+    }
 
 
-      callAPi()
+    callAPi()
 
-    }, [])
-    
+  }, [])
+
 
 
   return (
@@ -41,19 +49,21 @@ export default function Home() {
       <Head>
         <title>Realvedic</title>
       </Head>
-      
+
       {/* banner */}
       <div className='w-full relative h-[40vh]'>
         <Image
-        src={banner}
-        fill
-        alt='a'
+          src={banner}
+          fill
+          alt='a'
         />
       </div>
 
       {/* navbar searchbar */}
-      <div className='w-full gap-2 flex justify-between py-2 px-2 mt-5'>
+      <div className='w-full gap-2 flex justify-between py-2 px-2 mt-5 sticky top-[3%] z-[300]'>
+        <div className='w-full'>
         <Navbar />
+        </div>
         <Searchbar />
       </div>
 

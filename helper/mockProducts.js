@@ -49,14 +49,36 @@ const navItems = [
 ];
 
 export default navItems;
+
 // export default products;
 
 
-// const api = {
-//     all_products: [
-//         {id: 0, title: '', images: ['', '', ''], description: '', },
-//     ],
-//     noodle_pasta: [],
-//     flour_pack: [],
-//     spice_blends: [],
-// };
+// const api = [
+//     {
+//         cat_name: 'All Products',
+//         cat_id: 0,
+//         cat_item: [
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//         ],
+//     },
+//     {
+//         cat_name: 'Noodles',
+//         cat_id: 1,
+//         cat_item: [
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//         ],
+//     },
+//     {
+//         cat_name: 'Soup',
+//         cat_id: 3,
+//         cat_item: [
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//             {id: 0, title: '', images: [], price: '', description: ''},
+//         ],
+//     },
+// ];
