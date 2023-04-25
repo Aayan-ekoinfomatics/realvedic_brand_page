@@ -2,7 +2,7 @@ const { atom } = require("recoil");
 
 const allCategoriesAtom = atom({
     key: 'allCategoriesAtom',
-    default: {},
+    default: [],
 })
 
 export default allCategoriesAtom;

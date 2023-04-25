@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import products from '../../helper/mockProducts'
+import bestSellersAtom from "@/recoil/bestSellersAtom";
+import { useRecoilState } from "recoil";
 
 
 export default function ResponsiveCarousel() {
 
-    const [allProducts, setAllProducts] = useState();
+    const [allBestSellerProducts, setAllBestSellerProducts] = useRecoilState(bestSellersAtom);
 
     const domain = 'http://192.168.1.8:8000/';
     // const responsive = [
@@ -25,7 +27,7 @@ export default function ResponsiveCarousel() {
 
     //       const response = await fetch(domain + 'brand_page');
     //       const jsonData = await response.json();
-    //       setAllProducts(jsonData?.All_Products);
+    //       setAllBestSellerProducts(jsonData?.All_Products);
     //   }
 
 
@@ -49,10 +51,10 @@ export default function ResponsiveCarousel() {
                 dynamicHeight={false}
                 className='w-full max-w-[800px] border bg-gray-100 rounded-[20px] pt-10'
             >
-                {allProducts?.map((item) => (
+                {allBestSellerProducts?.cat_items?.map((item) => (
                     <div key={item.id} className='w-full'>
                         <div className=''>
-                            <img src={domain + item?.image[0]} className="max-w-[300px]" alt="slides" />
+                            <img src={process.env.NEXT_PUBLIC_BASE_LINK + item?.image[0]} className="max-w-[300px]" alt="slides" />
                         </div>
                         <div className='pb-10'>
                             <h2 className="text-[16px] font-[500]">{item.title}</h2>

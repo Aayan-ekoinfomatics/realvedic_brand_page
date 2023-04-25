@@ -39,13 +39,13 @@ import milletNoodles from '../assets/images/product-images/finger_millet_noodles
 
 const navItems = [
     { route: '/', id: 0, title: 'HOME' },
-    { route: '/products/atta', id: 1, title: 'ATTA', res_name: 'Flour_Packs' },
+    { route: '/products/atta', id: 1, title: 'ATTA', res_name: 'Flour Packs' },
     { route: '/products/noodles', id: 2, title: 'NOODLES', res_name: 'Noodles' },
-    { route: '/products/soup', id: 3, title: 'RASAM & SOUP',  res_name: 'Rasam_&_Soup' },
+    { route: '/products/soup', id: 3, title: 'RASAM & SOUP',  res_name: 'Rasam & Soup' },
     { route: '/products/dosa', id: 4, title: 'DOSA',  res_name: 'Dosa_Mix' },
-    { route: '/products/spice-blends', id: 5, title: 'SPICE BLENDS',  res_name: 'Spice_Blends'},
-    { route: '/products/bevarages', id: 6, title: 'BEVERAGES',  res_name: 'Beverage_Mix'},
-    { route: '/products/health-mix', id: 7, title: 'Health Mix',  res_name: 'Health_Mix'},
+    { route: '/products/spice-blends', id: 5, title: 'SPICE BLENDS',  res_name: 'Spice Blends'},
+    { route: '/products/bevarages', id: 6, title: 'BEVERAGES',  res_name: 'Beverage Mix'},
+    { route: '/products/health-mix', id: 7, title: 'Health Mix',  res_name: 'Health Mix'},
 ];
 
 export default navItems;

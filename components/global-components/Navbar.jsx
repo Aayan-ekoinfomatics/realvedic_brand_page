@@ -1,4 +1,5 @@
 import navItems from '@/helper/mockProducts';
+import allCategoriesAtom from '@/recoil/allCategoriesAtom';
 import selectedCategoryAtom from '@/recoil/selectedCategoryAtom';
 import Link from 'next/link';
 import React, { useEffect } from 'react'
@@ -7,6 +8,7 @@ import { useRecoilState } from 'recoil';
 const Navbar = () => {
 
     const [selectedCategory, setSelectedCategory] = useRecoilState(selectedCategoryAtom);
+    const [allProducts, setAllProducts] = useRecoilState(allCategoriesAtom);
 
     // const navItems = [
     //     { route: '/', id: 0, title: 'HOME' },
@@ -20,7 +22,7 @@ const Navbar = () => {
     //     { route: '/products/ready-to-eat', id: 8, title: 'READY TO EAT' },
     // ];
 
-    useEffect(() => {console.log(selectedCategory)}, [selectedCategory]);
+    // useEffect(() => {console.log(selectedCategory)}, [selectedCategory]);
 
 
     return (
